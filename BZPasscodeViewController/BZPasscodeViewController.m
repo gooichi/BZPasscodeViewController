@@ -23,7 +23,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+#if BZ_USE_SOUND
 #import <AVFoundation/AVFoundation.h>
+#endif
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "BZPasscodeViewController.h"
