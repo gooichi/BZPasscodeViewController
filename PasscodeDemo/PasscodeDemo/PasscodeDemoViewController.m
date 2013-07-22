@@ -161,7 +161,7 @@
         *detailTextHighlighted = NO;
         if (![enteredPasscode isEqualToString:passcode]) {
             failedAttempts++;
-            *detailText = [NSString stringWithFormat:((failedAttempts == 1) ? NSLocalizedString(@"%u Failed Passcode Attempt", @"") : NSLocalizedString(@"%u Failed Passcode Attempts", @"")), (unsigned long)failedAttempts];
+            *detailText = [NSString stringWithFormat:((failedAttempts == 1) ? NSLocalizedString(@"%lu Failed Passcode Attempt", @"") : NSLocalizedString(@"%lu Failed Passcode Attempts", @"")), (unsigned long)failedAttempts];
             *detailTextHighlighted = YES;
             return BZPasscodeViewControllerResultInvalid;
         } else {
