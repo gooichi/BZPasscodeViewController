@@ -199,7 +199,7 @@
     passcodeViewController_.detailTextHighlighted = NO;
     if (waitingTime > 0) {
         NSUInteger minutes = ceil(waitingTime / 60);
-        passcodeViewController_.text = [NSString stringWithFormat:((minutes == 1) ? NSLocalizedString(@"Try again in %u minute", @"") : NSLocalizedString(@"Try again in %u minutes", @"")), minutes];
+        passcodeViewController_.text = [NSString stringWithFormat:((minutes == 1) ? NSLocalizedString(@"Try again in %lu minute", @"") : NSLocalizedString(@"Try again in %lu minutes", @"")), (unsigned long)minutes];
         passcodeViewController_.keypadEnabled = NO;
     } else {
         passcodeViewController_.text = NSLocalizedString(@"Enter your passcode", @"");
@@ -210,11 +210,11 @@
             passcodeViewController_.detailText = nil;
             break;
         case 1:
-            passcodeViewController_.detailText = [NSString stringWithFormat:NSLocalizedString(@"%u Failed Passcode Attempt", @""), failedAttempts_];
+            passcodeViewController_.detailText = [NSString stringWithFormat:NSLocalizedString(@"%lu Failed Passcode Attempt", @""), (unsigned long)failedAttempts_];
             passcodeViewController_.detailTextHighlighted = YES;
             break;
         default:
-            passcodeViewController_.detailText = [NSString stringWithFormat:NSLocalizedString(@"%u Failed Passcode Attempts", @""), failedAttempts_];
+            passcodeViewController_.detailText = [NSString stringWithFormat:NSLocalizedString(@"%lu Failed Passcode Attempts", @""), (unsigned long)failedAttempts_];
             passcodeViewController_.detailTextHighlighted = YES;
             break;
     }
@@ -320,7 +320,7 @@ enum {
         NSTimeInterval waitingTime = [self waitingTimeIntervalSinceNow];
         if (waitingTime > 0) {
             NSUInteger minutes = ceil(waitingTime / 60);
-            passcodeViewController_.text = [NSString stringWithFormat:((minutes == 1) ? NSLocalizedString(@"Try again in %u minute", @"") : NSLocalizedString(@"Try again in %u minutes", @"")), minutes];
+            passcodeViewController_.text = [NSString stringWithFormat:((minutes == 1) ? NSLocalizedString(@"Try again in %lu minute", @"") : NSLocalizedString(@"Try again in %lu minutes", @"")), (unsigned long)minutes];
             passcodeViewController_.keypadEnabled = NO;
         } else {
             passcodeViewController_.text = NSLocalizedString(@"Enter your old passcode", @"");
@@ -331,11 +331,11 @@ enum {
                 passcodeViewController_.detailText = nil;
                 break;
             case 1:
-                passcodeViewController_.detailText = [NSString stringWithFormat:NSLocalizedString(@"%u Failed Passcode Attempt", @""), failedAttempts_];
+                passcodeViewController_.detailText = [NSString stringWithFormat:NSLocalizedString(@"%lu Failed Passcode Attempt", @""), (unsigned long)failedAttempts_];
                 passcodeViewController_.detailTextHighlighted = YES;
                 break;
             default:
-                passcodeViewController_.detailText = [NSString stringWithFormat:NSLocalizedString(@"%u Failed Passcode Attempts", @""), failedAttempts_];
+                passcodeViewController_.detailText = [NSString stringWithFormat:NSLocalizedString(@"%lu Failed Passcode Attempts", @""), (unsigned long)failedAttempts_];
                 passcodeViewController_.detailTextHighlighted = YES;
                 break;
         }
