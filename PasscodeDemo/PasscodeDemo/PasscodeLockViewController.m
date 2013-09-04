@@ -23,6 +23,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+#import "BZNavigationController.h"
 #import "UIPopoverController+BZExtensions.h"
 #import "PasscodeDemoDefaultsKeys.h"
 #import "PasscodeLockViewController.h"
@@ -116,8 +117,10 @@
     }
     if (passcodeViewController) {
         passcodeViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissPasscodeViewController)];
-        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:passcodeViewController];
-
+        BZNavigationController *navigationController = [[BZNavigationController alloc] initWithRootViewController:passcodeViewController];
+        navigationController.shouldAutorotate = passcodeViewController.shouldAutorotate;
+        navigationController.supportedInterfaceOrientations = passcodeViewController.supportedInterfaceOrientations;
+        navigationController.preferredInterfaceOrientationForPresentation = passcodeViewController.preferredInterfaceOrientationForPresentation;
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
             [self presentViewController:navigationController animated:YES completion:nil];
         } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
