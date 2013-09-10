@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110BFDE617D6FC0B009DB044 /* BZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 110BFDE517D6F7E9009DB044 /* BZNavigationController.m */; };
 		874ACCBB1712E4270056C6B9 /* UIPopoverController+BZExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 874ACCBA1712E41E0056C6B9 /* UIPopoverController+BZExtensions.m */; };
 		874ACCBD1712EF510056C6B9 /* BZPasscodeFieldController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 874ACCBC1712EF510056C6B9 /* BZPasscodeFieldController~iphone.xib */; };
 		874ACCBF1712EF600056C6B9 /* BZPasscodeViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 874ACCBE1712EF600056C6B9 /* BZPasscodeViewController~iphone.xib */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110BFDE417D6F7E9009DB044 /* BZNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BZNavigationController.h; path = ../../BZ/BZNavigationController.h; sourceTree = "<group>"; };
+		110BFDE517D6F7E9009DB044 /* BZNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BZNavigationController.m; path = ../../BZ/BZNavigationController.m; sourceTree = "<group>"; };
 		874ACCB91712E41E0056C6B9 /* UIPopoverController+BZExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIPopoverController+BZExtensions.h"; path = "../../BZ/UIPopoverController+BZExtensions.h"; sourceTree = "<group>"; };
 		874ACCBA1712E41E0056C6B9 /* UIPopoverController+BZExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIPopoverController+BZExtensions.m"; path = "../../BZ/UIPopoverController+BZExtensions.m"; sourceTree = "<group>"; };
 		874ACCBC1712EF510056C6B9 /* BZPasscodeFieldController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "BZPasscodeFieldController~iphone.xib"; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 		874ACCB5170B2E2B0056C6B9 /* BZ */ = {
 			isa = PBXGroup;
 			children = (
+				110BFDE417D6F7E9009DB044 /* BZNavigationController.h */,
+				110BFDE517D6F7E9009DB044 /* BZNavigationController.m */,
 				874ACCB91712E41E0056C6B9 /* UIPopoverController+BZExtensions.h */,
 				874ACCBA1712E41E0056C6B9 /* UIPopoverController+BZExtensions.m */,
 			);
@@ -240,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110BFDE617D6FC0B009DB044 /* BZNavigationController.m in Sources */,
 				874ACCBB1712E4270056C6B9 /* UIPopoverController+BZExtensions.m in Sources */,
 				D70DA1C216FF0D2900935E20 /* AppDelegate.m in Sources */,
 				D7CCF59A170457AE00B07C3A /* BZPasscodeViewController.m in Sources */,
