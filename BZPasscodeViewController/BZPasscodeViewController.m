@@ -465,9 +465,13 @@
 
 - (NSUInteger)supportedInterfaceOrientations {
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        return (UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown);
+        return ((1 << UIInterfaceOrientationPortrait)
+                | (1 << UIInterfaceOrientationPortraitUpsideDown));
     } else {
-        return UIInterfaceOrientationMaskAll;
+        return ((1 << UIInterfaceOrientationPortrait)
+                | (1 << UIInterfaceOrientationLandscapeLeft)
+                | (1 << UIInterfaceOrientationLandscapeRight)
+                | (1 << UIInterfaceOrientationPortraitUpsideDown));
     }
 }
 
